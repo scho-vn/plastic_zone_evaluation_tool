@@ -1,0 +1,2 @@
+Filename,Crack Tip x [mm],Crack Tip y [mm],Crack Angle,Side,Force,Alpha,HB,Risslaenge,Hoehe,Breite,K_I_VCCT,K_II_VCCT,K_III_VCCT,K_I_SIFS,K_II_SIFS,K_III_SIFS,K_V_VCCT,K_V_SIFS,Ratio
+Nodemap_Step_30_Fx_94500_Fy_31500.txt,89.8,0.0,0.0,right,94500.0,0.4276190476190476,0,90.0,390.0,195.0,1.11,0.0,0.0,21.67,-0.01,-0.03,1.11,21.67,3.0
