@@ -35,10 +35,16 @@ The repository contains the following folders:
 
 ## What is this all about?
 Digital image correlation (DIC) is a modern optical and non-contact measurement method for determining movements and strains in material testing. The combination of DIC and fracture mechanics testing enables deeper insights into crack growth behaviour on a microscopic and macroscopic level. [**1**]
-As a result of cyclic or monotonic loading, permanent plastic deformations, the so-called plastic zone, form at the crack tip in ductile materials[**2**].
+As a result of cyclic or monotonic loading, permanent plastic deformations, the so-called plastic zone, forms at the crack tip in ductile materials[**2**]. It's useful to know the shape and size of the plastic zone around a crack. This helps us understand how the plasticity effect affects the crack growth behaviour in solids.
 
 
 ## How does it work?
+The specimen is described using a full-surface displacement and strain field, which can be determined using DIC or given by numerical data. The crack tip position must also be known.  With the help of contour recognition based on a material-dependent threshold value, the plastically and elastically deformed area in front of the crack tip can be separated within the strain field. The relevant contours are identified via a case distinction and characterised by measuring the contour using descriptors.
+
+
+| ![CrackPy](./Example_Images/Contour_Separation.png) |
+|:--:|
+| **_Overview of main modules, functions and files in CrackPy_** |
 
 
 
@@ -52,7 +58,7 @@ Feel free to use the code, however, **we do not guarantee in any form for its fl
 
  
 ## Get in touch
-If you are interested in the code, or in our work in general, feel free to contact us 
+If you are interested in the code, or in our work in general, feel free to contact me 
 via email at [vanessa.schoene@dlr.de](mailto:vanessa.schoene@dlr.de) or [vanessa.schoene5@gmail.com](mailto:vanessa.schoene5@gmail.com)
 
 ## Intellectual Property and Authorship 
