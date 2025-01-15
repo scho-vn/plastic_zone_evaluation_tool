@@ -50,12 +50,12 @@ By analyzing the contour extreme points we can obtain several descriptors such a
 
 | ![pz_ev_tool](./Example_Images/Plastic_Zone_Characterization.png) |
 |:--:|
-| **_Analysis and description of the plastic zones within numerical finite elemente and DIC data_** |
+| **_Analysis and description of the plastic zones within numerical finite elemente and high resolution DIC data_** |
 
 ## What is the output?
 See `02_results` for given data in  `data_examples`:
 * Visualization of the contour itself and mapped on the nodemap
-* .csv file containing crack tip position, neccesary image information and all contour descriptors
+* .csv file containing crack tip position, neccesary image metadata and all contour descriptors
 * .pickle file additionally containing the contours itself and all variables set during data evaluation
 
 
