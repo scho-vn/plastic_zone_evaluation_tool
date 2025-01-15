@@ -42,14 +42,15 @@ As a result of cyclic or monotonic loading, permanent plastic deformations, the 
 The specimen is described using a full-surface nodal displacement and strain field, so-called "Nodemaps", that can be determined using high resolution DIC or given by numerical data. The crack tip position must also be known (marked as 'X' in image below).  With the help of contour recognition based on a material-dependent threshold value, the plastically and elastically deformed area in front of the crack tip can be separated within the strain field. The relevant contours are identified via a case distinction and characterised by measuring the contour using descriptors.
 
 
-| ![CrackPy](./Example_Images/Contour_Separation.png) |
+| ![pz_ev_tool](./Example_Images/Contour_Separation.png) |
 |:--:|
 | **_Overview of contour evaluation in high resolution DIC data and case distinction_** |
 
+By analyzing the contour extreme points we can obtain several descriptors such as height, width, total area. 
 
-
- *todo*
-[**1**]
+| ![pz_ev_tool](./Example_Images/Plastic_Zone_Characterization.png) |
+|:--:|
+| **_Analysis and description of the plastic zones within numerical and DIC data_** |
 
  ## License and Limitations
 The package is developed **for research only and must not be used for any production or specification purposes**. 
