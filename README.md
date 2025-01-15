@@ -34,7 +34,8 @@ The repository contains the following folders:
 * `utils`: Neccesary functions to read and process data inputs
 
 ## What is this all about?
-
+Digital image correlation (DIC) is a modern optical and non-contact measurement method for determining movements and strains in material testing. The combination of DIC and fracture mechanics testing enables deeper insights into crack growth behaviour on a microscopic and macroscopic level. [**1**]
+As a result of cyclic or monotonic loading, permanent plastic deformations, the so-called plastic zone, form at the crack tip in ductile materials[**2**].
 
 
 ## How does it work?
