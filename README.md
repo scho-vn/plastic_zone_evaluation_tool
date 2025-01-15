@@ -39,12 +39,12 @@ As a result of cyclic or monotonic loading, permanent plastic deformations, the 
 
 
 ## How does it work?
-The specimen is described using a full-surface displacement and strain field, which can be determined using DIC or given by numerical data. The crack tip position must also be known.  With the help of contour recognition based on a material-dependent threshold value, the plastically and elastically deformed area in front of the crack tip can be separated within the strain field. The relevant contours are identified via a case distinction and characterised by measuring the contour using descriptors.
+The specimen is described using a full-surface displacement and strain field, which can be determined using high resolution DIC or given by numerical data. The crack tip position must also be known (marked as 'X').  With the help of contour recognition based on a material-dependent threshold value, the plastically and elastically deformed area in front of the crack tip can be separated within the strain field. The relevant contours are identified via a case distinction and characterised by measuring the contour using descriptors.
 
 
 | ![CrackPy](./Example_Images/Contour_Separation.png) |
 |:--:|
-| **_Overview of main modules, functions and files in CrackPy_** |
+| **_Overview of contour evaluation in high resolution DIC data and case distinction_** |
 
 
 
