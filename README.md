@@ -2,9 +2,9 @@
 
 The plastic zone evaluation tool is utilised for the identification and description of the plastically deformed area at the crack tip. This can be achieved through the utilisation of numerical strain fields or strain fields determined experimentally using Digital Image Correlation (DIC). The contour recognition process serves as the fundamental foundation for the analysis. Geometric descriptors are then employed to provide a detailed and quantitative description of the area that has been previously identified.
 
+This repository contains the code used to generate the results of the research article
 [![DOI](https://zenodo.org/badge/DOI/10.1016/j.engfracmech.2024.110664.svg )](https://doi.org/10.1016/j.engfracmech.2024.110664 )
 
-This repository contains the code used to generate the results of the research article
 ```
 Vanessa Schöne, Florian Paysan and Eric Breitbarth. (2024)
 The relationship between crack front twisting, plastic zone and da/dN-dK curve of fatigue cracks in AA2024-T3. 
@@ -63,3 +63,5 @@ References:
 1. **Hebert J. et al. (2022)** The application of digital image correlation (DIC) in fatigue experimentation: A review. 
    _FFEMS Volume46, Issue4_ 
    [https://doi.org/10.1007/s10704-006-6631-2](https://doi.org/10.1007/s10704-006-6631-2)
+2. Plastic zone - an overview
+[https://www.sciencedirect.com/topics/engineering/plastic-zone] (https://www.sciencedirect.com/topics/engineering/plastic-zone)
