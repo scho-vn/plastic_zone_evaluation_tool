@@ -13,14 +13,14 @@ from utils.result_writer import Result_Writer
 
 
 global_path = os.getcwd()
-specimen_name = "dic_cruciform_specimen"
+specimen_name = "dic_mt_specimen"
 side = "right"
-specimen_type = "Biax"
+specimen_type = "MT"
 
 
-data_input = data_input_from_csv(
+data_input = data_input_from_csv_mt(
     csv_filepath=os.path.join(
-        global_path, "data_examples", f"{specimen_name}", "Cruciform_5.csv"
+        global_path, "data_examples", f"{specimen_name}", "MT160_45_MDIC.csv"
     )
 )
 

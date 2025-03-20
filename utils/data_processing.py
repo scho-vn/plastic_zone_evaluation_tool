@@ -488,11 +488,11 @@ class Data_Processing:
                 )
                 x_right, y_right = x_int[int(extRight[0])], y_int[int(extRight[1])]
                 extTop = tuple(
-                    contour_to_analyze[contour_to_analyze[:, :, 1].argmin()][0]
+                    contour_to_analyze[contour_to_analyze[:, :, 1].argmax()][0]
                 )
                 x_top, y_top = x_int[int(extTop[0])], y_int[int(extTop[1])]
                 extBot = tuple(
-                    contour_to_analyze[contour_to_analyze[:, :, 1].argmax()][0]
+                    contour_to_analyze[contour_to_analyze[:, :, 1].argmin()][0]
                 )
                 x_bottom, y_bottom = x_int[int(extBot[0])], y_int[int(extBot[1])]
 
