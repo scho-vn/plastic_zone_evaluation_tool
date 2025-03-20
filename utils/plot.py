@@ -107,6 +107,7 @@ class Plotter:
                         marker="X",
                         ax=axs,
                         zorder=1,
+                        label='Crack Tip'
                     )
 
                 if np.any(plot_extreme_points):
@@ -123,6 +124,7 @@ class Plotter:
                             ax=axs,
                             edgecolor="k",
                             zorder=2,
+                            label=ext
                         )
 
                 axs.set_xlim(
@@ -147,6 +149,11 @@ class Plotter:
                 )
                 axs.set_xlabel(r"$\it x$ [mm]")
                 axs.set_ylabel(r"$\it y$ [mm]")
+
+                handles, labels = axs.get_legend_handles_labels()
+                axs.legend(handles, labels, bbox_to_anchor=(0, 1.02, 1, 0.2), loc="lower left",
+                                 mode="expand", borderaxespad=0, ncol=2)
+
                 plt.tight_layout()
 
                 output_name = f"{self.analysis.nodemap_name}.png"
