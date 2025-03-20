@@ -23,7 +23,6 @@ from utils.plot import Plotter
 from utils.result_writer import Result_Writer
 
 
-
 global_path = os.getcwd()
 specimen_name='fe'
 side = 'right'
