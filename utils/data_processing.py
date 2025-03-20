@@ -1,24 +1,11 @@
-import numpy as np
-import os
 import math
-import pandas as pd
 import matplotlib
-from matplotlib import pyplot as plt, cm
-from pandas.core.common import count_not_none
-
-from utils.functions import data_input_from_csv
 from crackpy.structure_elements.data_files import Nodemap
-from utils.input_data import InputDataBiax, InputData
+from crackpy.fracture_analysis.data_processing import InputData
 from scipy.interpolate import griddata
 import cv2
 import os
 import numpy as np
-
-import pyvista
-from pyvista import CellType
-from crackpy.structure_elements import data_files
-from crackpy.structure_elements.material import Material
-from utils.input_data import apply_mask
 
 matplotlib.use('tKAgg')
 
@@ -65,7 +52,39 @@ class Data_Processing:
             if not os.path.exists(folder):
                 os.makedirs(folder)
 
+    def get_meta_attributes(self):
+        """
+        Define the meta attributes according to specimen type - default is MT Specimen
+        """
+        if self.specimen_type == 'Biax':
+            self.meta_attributes = [
+                'force',
+                'cycles',
+                'displacement',
+                'potential',
+                'cracklength',
+                'time',
+                'dms_1', 'dms_2',
+                'x', 'y', 'z',
+                'alignment_translation_x',
+                'alignment_translation_y',
+                'alignment_translation_z',
+                'experimental_data_load_main_axis_fy',
+                'experimental_data_load_side_axis_fx',
+                'experimental_data_cycles_catman',
+                'experimental_data_cycles',
+                'experimental_data_crack_tip_x_right',
+                'experimental_data_crack_tip_y_right',
+                'experimental_data_crack_tip_x_left',
+                'experimental_data_crack_tip_y_left',
+                'experimental_data_stage',
+                'experimental_data_step_number'
+            ]
 
+            self.meta_attributes_to_keywords = {v:v for v in self.meta_attributes }
+
+
+            return self.meta_attributes_to_keywords
 
     def mask_data(self, crack_tip_x: float = None, crack_tip_y : float = None,
                   folder_id : float = None,
@@ -122,7 +141,10 @@ class Data_Processing:
             self.nodemap_path = os.path.join(os.getcwd(),'data_examples', self.specimen_name, 'nodemaps',)
             self.nodemap = Nodemap(name=self.nodemap_name, folder=self.nodemap_path)
 
-            self.nodemap_file = InputDataBiax(self.nodemap)
+            self.nodemap_file = InputData(self.nodemap,meta_keywords=self.meta_attributes_to_keywords)
+            self.cycles = self.nodemap_file.experimental_data_cycles
+            self.force = self.nodemap_file.experimental_data_load_main_axis_fy
+            self.cracklength = self.nodemap_file.experimental_data_crack_tip_x_right
             self.crack_tip_x = crack_tip_x * self.flip
             self.crack_tip_y = crack_tip_y
 
