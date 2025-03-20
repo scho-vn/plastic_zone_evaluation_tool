@@ -24,6 +24,8 @@ from utils.result_writer import Result_Writer
 
 f'test'
 
+
+
 global_path = os.getcwd()
 specimen_name='dic_mt_specimen'
 side = 'right'
