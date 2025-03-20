@@ -22,9 +22,6 @@ from utils.data_processing import Data_Processing
 from utils.plot import Plotter
 from utils.result_writer import Result_Writer
 
-f'test'
-
-
 
 global_path = os.getcwd()
 specimen_name='dic_mt_specimen'
