@@ -1,22 +1,4 @@
-import csv
-import pickle
 import os
-import shutil
-import pickle
-import numpy as np
-
-from matplotlib import pyplot as plt, cm
-from matplotlib import tri
-from matplotlib.colors import ListedColormap
-from scipy.interpolate import griddata
-import scipy.interpolate
-import cv2
-import pandas as pd
-import math
-import crackpy
-from crackpy.structure_elements.data_files import Nodemap
-from crackpy.fracture_analysis.data_processing import InputData
-
 from utils.functions import data_input_from_csv, sum_results, pickle_output, filter_data_input, data_input_from_dict, data_input_from_csv_mt
 from utils.data_processing import Data_Processing
 from utils.plot import Plotter
@@ -42,6 +24,7 @@ for item in input_list:
                                side = side,
                                nodemap_name = item,
                                specimen_type = specimen_type)
+    meta_attributes = analysis.get_meta_attributes()
     mask = analysis.mask_data(crack_tip_x=data_input[item][0],
                               crack_tip_y=data_input[item][1],
                               strain_treshold = 0.68,
